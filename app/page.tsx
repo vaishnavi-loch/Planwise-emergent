@@ -67,7 +67,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative isolate flex min-h-[85vh] md:min-h-screen items-center overflow-hidden">
         <Image
-          src="/images/photos/hero-new.jpg"
+          src="/images/photos/hero.jpg"
           alt=""
           fill
           priority
