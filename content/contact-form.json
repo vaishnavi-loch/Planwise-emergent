@@ -1,0 +1,14 @@
+{
+  "_note": "Field labels, placeholders and options copied verbatim from Planwise-_Contact_Us_Emergent.docx. Wire to a Next.js Server Action; fire tracking event 'form_submit' with form:'discovery_call' on success.",
+  "trackingForm": "discovery_call",
+  "submitLabel": "Book My Free Discovery Call",
+  "fields": [
+    { "name": "name", "label": "Name", "required": true, "type": "text", "placeholder": "Full name" },
+    { "name": "email", "label": "Email Address", "required": true, "type": "email", "placeholder": "you@example.com" },
+    { "name": "phone", "label": "Phone Number", "required": true, "type": "tel", "placeholder": "Best contact number" },
+    { "name": "location", "label": "Location", "required": true, "type": "text", "placeholder": "Suburb, City or State" },
+    { "name": "ageGroup", "label": "Age Group", "required": true, "type": "select", "options": ["30–50", "51–60", "61–70", "71–80", "80+"] },
+    { "name": "topics", "label": "What would you like to discuss? (Select all that apply)", "required": false, "type": "checkbox-group", "options": ["Purpose", "Financial & Legal", "Mind & Body", "Where & How You Live", "Something Else"] },
+    { "name": "message", "label": "How can we help?", "required": true, "type": "textarea", "placeholder": "Briefly tell us about your situation or any questions you have." }
+  ]
+}

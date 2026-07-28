@@ -1,0 +1,20 @@
+{
+  "_note": "Verbatim from content/pages/home.mdx, 'Who We Help' section. Kept in sync manually.",
+  "items": [
+    {
+      "title": "Older Australians Planning For The Future",
+      "body": "If you are thinking about your future, we help you consider your options and create a plan that reflects your priorities, lifestyle and goals.",
+      "icon": "UserRound"
+    },
+    {
+      "title": "Families Supporting Ageing Parents",
+      "body": "When you are helping an older family member make decisions, we provide independent guidance to help you understand options, ask the right questions and plan together.",
+      "icon": "UsersRound"
+    },
+    {
+      "title": "When Your Needs Or Circumstances Change",
+      "body": "If your living arrangements, support needs or priorities change, we help you review your options and identify the next steps that suit your situation.",
+      "icon": "Compass"
+    }
+  ]
+}

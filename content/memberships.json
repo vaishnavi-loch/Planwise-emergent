@@ -1,0 +1,49 @@
+{
+  "_note": "Strings copied verbatim from Planwise-_Membership_Emergent.docx and Proposed_payment_structure_July_2026. Do not paraphrase. Prices are plain data so they can change without touching design.",
+  "allMembershipsInclude": "full access to our library of 100+ evidence-based guides, videos and practical resources.",
+  "tiers": [
+    {
+      "id": "partner",
+      "name": "Planwise Partner Package",
+      "overview": "Ongoing support for one person",
+      "cost": "$49/month, min. 3 months ($147 total)",
+      "whoItSuits": "You want ongoing guidance as new questions come up",
+      "howOftenYouConnect": "Whenever you need guidance",
+      "whatYouGet": "Ongoing tips and guidance relevant to your situation",
+      "planUpdatesOverTime": "—",
+      "providerHelp": "We follow up with providers on your behalf",
+      "extras": "—",
+      "whichOptionSummary": "Suitable if you'd like ongoing access to guidance as new questions or decisions come up over time, without a fixed structure to it."
+    },
+    {
+      "id": "family-navigator",
+      "name": "Family Navigator Package",
+      "overview": "Ongoing support for up to 3 family members",
+      "cost": "$79/month, min. 6 months ($474 total)",
+      "whoItSuits": "You're coordinating care for a parent or loved one with other family members",
+      "howOftenYouConnect": "Whenever you need guidance, plus a monthly call",
+      "whatYouGet": "A shared, updated roadmap the whole family can follow",
+      "planUpdatesOverTime": "Your roadmap is updated whenever things change or additional services are needed",
+      "providerHelp": "We help you understand providers and follow up on your behalf",
+      "extras": "Help with funding body paperwork (e.g. My Aged Care)",
+      "whichOptionSummary": "Suitable if you're supporting a family member and want the whole family coordinated around one shared plan, with regular check-ins and help navigating paperwork like My Aged Care."
+    },
+    {
+      "id": "comprehensive",
+      "name": "Ageing Well Comprehensive Package",
+      "overview": "A complete plan, delivered once",
+      "cost": "$495 one-off",
+      "whoItSuits": "You want a full review done now, with a document to work from",
+      "howOftenYouConnect": "One in-depth planning process, plus 30 days of follow-up support",
+      "whatYouGet": "A written plan and report covering your situation across the 4 Pillars",
+      "planUpdatesOverTime": "—",
+      "providerHelp": "Coaching to prepare for provider conversations",
+      "extras": "45-minute follow-up consultation within 30 days",
+      "whichOptionSummary": "Suitable if you want a full plan done in one go, covering your situation across all 4 Pillars, with a written report and short-term follow-up support to help you act on it."
+    }
+  ],
+  "discoveryCall": {
+    "label": "Book Your Free Discovery Call",
+    "description": "free 15-minute discovery call"
+  }
+}

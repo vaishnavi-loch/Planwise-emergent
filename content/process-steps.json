@@ -1,0 +1,25 @@
+{
+  "_note": "Verbatim from content/pages/home.mdx, 'You Have A Need, We Have A Plan' section. Kept in sync manually.",
+  "items": [
+    {
+      "title": "Tell Us Your Situation",
+      "body": "Start with a free 15 minute discovery call. We will listen and learn about your goals, questions and what support you need.",
+      "icon": "PhoneCall"
+    },
+    {
+      "title": "Get Your Personalised Plan",
+      "body": "We develop a personalised plan based on your priorities, preferences and future needs.",
+      "icon": "ClipboardList"
+    },
+    {
+      "title": "Meet The Right Providers",
+      "body": "Where needed, we give you several options of trusted providers and professionals, so you can choose who to work with. We clarify, you choose.",
+      "icon": "Users"
+    },
+    {
+      "title": "Stay Supported Over Time",
+      "body": "As your circumstances change, we help you review your options, solve problems as they arise, and update your plan.",
+      "icon": "RefreshCw"
+    }
+  ]
+}

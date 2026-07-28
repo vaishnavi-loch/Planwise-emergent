@@ -1,0 +1,12 @@
+I want to rework the UI of the website as per Homepage scritly as currently this looks so basic and plain. It feels like text on white screen.
+
+Work on rest of the pages other than Homepage because that is completed.
+
+Let's start by modernising the sections of the page.
+I want you take reference from Homepage. We are not in favor of adding heavy interactions but basic ones like scroll animation is fine.
+
+You are free to change the height/width of the section. The only two things you cant change is the Color Theme and the Content. 
+
+Use relevant images wherever necessary. The website should be impressive. It should look simple but very impressive, beautiful and clean with modern touch.
+
+If you have any doubts, you can ask. Do not assume anything please

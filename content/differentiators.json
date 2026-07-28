@@ -1,0 +1,20 @@
+{
+  "_note": "Verbatim from content/pages/home.mdx, 'Why Clients Choose Us?' section. Kept in sync manually.",
+  "items": [
+    {
+      "title": "Independent",
+      "body": "We work for you, not service providers. We do not receive commissions from aged care providers or any providers in our referral network, so our guidance remains independent.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "title": "Personalised",
+      "body": "We work with you to identify what you need and would like for your older years, then create a personalised ageing well plan that reflects your goals, preferences and changing needs.",
+      "icon": "HeartHandshake"
+    },
+    {
+      "title": "Experienced",
+      "body": "Our team brings experience from nursing, care coordination, financial services, business, and psychology backgrounds to provide practical guidance for later life planning.",
+      "icon": "GraduationCap"
+    }
+  ]
+}

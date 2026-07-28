@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Shadcn semantic tokens — map to Planwise brand */
+    --background: 0 0% 100%;
+    --foreground: 220 30% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 19%;
+    --primary: 220 30% 31%; /* navy #384967 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 25% 96%;
+    --secondary-foreground: 220 30% 19%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 12% 40%;
+    --accent: 220 25% 96%;
+    --accent-foreground: 220 30% 19%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 30% 31%;
+    --radius: 0.5rem;
+  }
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-background text-navy font-sans; }
+  /* Visible focus ring — accessibility */
+  :focus-visible { @apply outline-none ring-2 ring-navy ring-offset-2 ring-offset-white; }
+  ::selection { background-color: #384967; color: white; }
+}
+
+@layer components {
+  .prose-planwise h2 { @apply text-navy font-semibold; }
+  .prose-planwise h3 { @apply text-navy font-semibold; }
+  .prose-planwise p { @apply text-navy leading-relaxed; }
+  .prose-planwise a:not(.inline-flex) { @apply text-pillar-legal-financial underline decoration-2 underline-offset-2 hover:opacity-80; }
+  .prose-planwise ul { @apply space-y-2; }
+  .prose-planwise ul li { @apply text-navy pl-6 relative; }
+  .prose-planwise ul li::before { content: '•'; @apply absolute left-0 top-0 text-pillar-purpose text-lg leading-none; }
+  .prose-planwise em { @apply italic text-navy/80; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}

@@ -1,0 +1,33 @@
+{
+  "_note": "Nav/footer strings verbatim from Planwise-_Footer_Content.docx. Pillar colours from Brand_Guidelines.pdf (secondary palette). Contact details verbatim from footer.",
+  "brandLine": "Independent ageing well support for individuals and families.",
+  "nav": [
+    { "label": "Home", "route": "/" },
+    { "label": "About", "route": "/about" },
+    { "label": "The 4 Pillars of Ageing Well", "route": "/pillars" },
+    { "label": "Memberships", "route": "/memberships" },
+    { "label": "Articles and Guides", "route": "/articles" },
+    { "label": "Contact", "route": "/contact" }
+  ],
+  "contact": {
+    "phone": "+61 8383 8932",
+    "email": "contact@myplanwise.com.au",
+    "address": "320 Lorimer Street, Port Melbourne, Victoria 3207"
+  },
+  "footerCta": "Book Your Free Discovery Call",
+  "newsletter": {
+    "prompt": "Subscribe to receive the latest Planwise articles and guides straight to your inbox.",
+    "buttonLabel": "Sign Up"
+  },
+  "social": ["Instagram", "Facebook", "LinkedIn"],
+  "bottomBar": {
+    "copyright": "© [Year] Planwise Australia. All rights reserved.",
+    "links": ["Terms and Conditions", "Privacy Policy", "Disclaimer"]
+  },
+  "pillars": [
+    { "slug": "purpose", "name": "Purpose", "color": "#41AC6B", "illustration": "/images/one.png" },
+    { "slug": "legal-and-financial", "name": "Legal & Financial", "color": "#4DA7D9", "illustration": "/images/two.png" },
+    { "slug": "mind-and-body", "name": "Mind & Body", "color": "#AB82BB", "illustration": "/images/three.png" },
+    { "slug": "where-and-how-you-live", "name": "Where & How You Live", "color": "#F79C5B", "illustration": "/images/four.png" }
+  ]
+}
