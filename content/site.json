@@ -3,12 +3,12 @@
   "brandLine": "Independent ageing well support for individuals and families.",
   "nav": [
     { "label": "Home", "route": "/" },
-    { "label": "About", "route": "/about" },
-    { "label": "The 4 Pillars of Ageing Well", "route": "/pillars" },
+    { "label": "About Us", "route": "/about" },
+    { "label": "The 4 Pillars", "route": "/pillars" },
     { "label": "Memberships", "route": "/memberships" },
     { "label": "Case Studies", "route": "/client-stories" },
     { "label": "Blogs", "route": "/articles" },
-    { "label": "Contact", "route": "/contact" }
+    { "label": "Contact Us", "route": "/contact" }
   ],
   "contact": {
     "phone": "+61 8383 8932",
