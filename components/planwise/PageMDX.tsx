@@ -13,7 +13,8 @@ const CTA_RE = /^\s*CTA\s*[–—\-:.]\s*(.+)$/i;
 // Most CTAs point at /contact by default; a few labels need a different destination.
 const CTA_HREF_OVERRIDES: Record<string, string> = {
   'compare memberships in full': '/memberships',
-  'explore the 4 pillars': '/pillars'
+  'explore the 4 pillars': '/pillars',
+  'explore the four pillars': '/pillars'
 };
 
 function cleanChildren(children: ReactNode): ReactNode {
