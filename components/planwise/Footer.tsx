@@ -9,6 +9,12 @@ const socialIcons: Record<string, LucideIcon> = {
   Instagram, Facebook, LinkedIn: Linkedin
 };
 
+const socialLinkHrefs: Record<string, string> = {
+  Instagram: 'https://www.instagram.com/planwise.australia',
+  Facebook: 'https://www.facebook.com/profile.php?id=61586804823367',
+  LinkedIn: 'https://www.linkedin.com/company/planwise-australia'
+};
+
 const bottomBarLinkHrefs: Record<string, string> = {
   'Terms and Conditions': '/terms-and-conditions',
   'Privacy Policy': '/privacy-policy',
@@ -68,7 +74,14 @@ export default function Footer() {
             {site.social.map((s) => {
               const Icon = socialIcons[s];
               return (
-                <a key={s} href="#" aria-label={s} className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-150 grid place-items-center">
+                <a
+                  key={s}
+                  href={socialLinkHrefs[s] ?? '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s}
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-150 grid place-items-center"
+                >
                   {Icon ? <Icon className="w-4 h-4" aria-hidden="true" /> : null}
                 </a>
               );
