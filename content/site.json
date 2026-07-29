@@ -27,7 +27,7 @@
   },
   "pillars": [
     { "slug": "purpose", "name": "Purpose", "color": "#41AC6B", "illustration": "/images/one.png" },
-    { "slug": "legal-and-financial", "name": "Legal & Financial", "color": "#4DA7D9", "illustration": "/images/two.png" },
+    { "slug": "legal-and-financial", "name": "Financial & Legal", "color": "#4DA7D9", "illustration": "/images/two.png" },
     { "slug": "mind-and-body", "name": "Mind & Body", "color": "#AB82BB", "illustration": "/images/three.png" },
     { "slug": "where-and-how-you-live", "name": "Where & How You Live", "color": "#F79C5B", "illustration": "/images/four.png" }
   ]

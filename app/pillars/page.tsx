@@ -34,7 +34,7 @@ export default function PillarsPage() {
 
   const idxWhatAgeingWell = body.indexOf('## What Ageing Well Really Means');
   const idxPillar1 = body.indexOf('## Pillar 1: Purpose');
-  const idxPillar2 = body.indexOf('## Pillar 2: Legal & Financial');
+  const idxPillar2 = body.indexOf('## Pillar 2: Financial & Legal');
   const idxPillar3 = body.indexOf('## Pillar 3: Mind & Body');
   const idxPillar4 = body.indexOf('## Pillar 4: Where & How You Live');
   const idxHowWork = body.indexOf('## How The Pillars Work Together');
