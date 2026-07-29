@@ -91,7 +91,7 @@ export default function HomePage() {
       </section>
 
       {/* What Is Planwise + Why Clients Choose Us */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-1/3 -right-32 w-96 h-96 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
         <div className="container">
           <FadeInSection>
@@ -122,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* You Have A Need, We Have A Plan */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container">
           <FadeInSection>
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -149,7 +149,7 @@ export default function HomePage() {
       </section>
 
       {/* Pillars — rendered text verbatim, then interactive cards below */}
-      <section className="relative overflow-hidden container py-3 md:py-5">
+      <section className="relative overflow-hidden container py-6 md:py-9">
         <div className="absolute -z-10 top-0 -left-32 w-96 h-96 rounded-full bg-pillar-where-how/10 blur-3xl" aria-hidden="true" />
         <FadeInSection>
           <PageMDX source={pillarsSection} className={noHeadingGap} />
@@ -160,7 +160,7 @@ export default function HomePage() {
       </section>
 
       {/* Who We Help */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container">
           <FadeInSection>
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -187,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* Membership snapshot */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 right-0 w-96 h-96 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
         <div className="container">
           <FadeInSection>
@@ -197,7 +197,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container max-w-4xl">
           <FadeInSection>
             <PageMDX source={faqHeading} className={noHeadingGap} />
@@ -209,7 +209,7 @@ export default function HomePage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="container pb-14 md:pb-20">
+      <section className="container pb-6 md:pb-9">
         <FadeInSection>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy/5 via-pillar-purpose/5 to-pillar-mind-body/5 px-6 py-14 md:py-16 text-center">
             <div className="absolute -z-10 -top-16 -right-16 w-72 h-72 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />

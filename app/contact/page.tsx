@@ -84,7 +84,7 @@ export default function ContactPage() {
       </section>
 
       {/* What Happens Next? */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container">
           <FadeInSection>
             <div className="max-w-2xl">
@@ -98,7 +98,7 @@ export default function ContactPage() {
       </section>
 
       {/* Who We Help */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 right-0 w-96 h-96 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
         <div className="container max-w-2xl">
           <FadeInSection>
@@ -108,7 +108,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container max-w-4xl">
           <FadeInSection>
             <PageMDX source={faqHeading} className={noHeadingGap} />

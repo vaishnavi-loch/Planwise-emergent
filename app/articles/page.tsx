@@ -99,7 +99,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Browse By Pillar */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container">
           <FadeInSection>
             <PageMDX source={browseIntro} className={noHeadingGap} />
@@ -111,7 +111,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Featured Articles and Guides */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 -right-32 w-96 h-96 rounded-full bg-pillar-purpose/10 blur-3xl" aria-hidden="true" />
         <div className="container">
           <FadeInSection>
@@ -124,7 +124,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Latest Articles and Guides */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container">
           <FadeInSection>
             <PageMDX source={latestIntro} className={noHeadingGap} />
@@ -137,7 +137,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Stay Up To Date */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-[32rem] h-64 rounded-full bg-pillar-mind-body/10 blur-3xl" aria-hidden="true" />
         <div className="container max-w-xl text-center">
           <FadeInSection>
@@ -152,7 +152,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container max-w-4xl">
           <FadeInSection>
             <PageMDX source={faqHeading} className={noHeadingGap} />
@@ -164,7 +164,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="container pb-14 md:pb-20">
+      <section className="container pb-6 md:pb-9">
         <FadeInSection>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy/5 via-pillar-purpose/5 to-pillar-mind-body/5 px-6 py-14 md:py-16 text-center">
             <div className="absolute -z-10 -top-16 -right-16 w-72 h-72 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />

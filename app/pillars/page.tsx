@@ -81,7 +81,7 @@ export default function PillarsPage() {
       </section>
 
       {/* What Ageing Well Really Means */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container max-w-3xl">
           <FadeInSection>
             <PageMDX source={whatAgeingWell} className={noHeadingGap} />
@@ -107,7 +107,7 @@ export default function PillarsPage() {
       })}
 
       {/* How The Pillars Work Together */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-[32rem] h-64 rounded-full bg-navy/5 blur-3xl" aria-hidden="true" />
         <div className="container max-w-3xl text-center">
           <FadeInSection>
@@ -121,7 +121,7 @@ export default function PillarsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container max-w-4xl">
           <FadeInSection>
             <PageMDX source={faqHeading} className={noHeadingGap} />

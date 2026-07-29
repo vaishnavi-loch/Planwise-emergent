@@ -70,7 +70,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* Start With A Free Discovery Call */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-1/3 -right-32 w-96 h-96 rounded-full bg-pillar-mind-body/10 blur-3xl" aria-hidden="true" />
         <div className="container">
           <FadeInSection>
@@ -92,7 +92,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* Compare Our Membership Options */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 right-0 w-96 h-96 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
         <div className="container">
           <FadeInSection>
@@ -110,7 +110,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* Which Option Is Right For You? */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container">
           <FadeInSection>
             <PageMDX source={whichOptionHeading} className={noHeadingGap} />
@@ -128,7 +128,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* Transparent Pricing, Independent Advice */}
-      <section className="relative overflow-hidden bg-white py-3 md:py-5">
+      <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-[32rem] h-64 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
         <div className="container max-w-3xl text-center">
           <FadeInSection>
@@ -141,7 +141,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-3 md:py-5">
+      <section className="bg-white py-6 md:py-9">
         <div className="container max-w-4xl">
           <FadeInSection>
             <PageMDX source={faqHeading} className={noHeadingGap} />
@@ -153,7 +153,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="container pb-14 md:pb-20">
+      <section className="container pb-6 md:pb-9">
         <FadeInSection>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy/5 via-pillar-purpose/5 to-pillar-mind-body/5 px-6 py-14 md:py-16 text-center">
             <div className="absolute -z-10 -top-16 -right-16 w-72 h-72 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
