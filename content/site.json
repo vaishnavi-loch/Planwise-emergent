@@ -1,6 +1,6 @@
 {
   "_note": "Nav/footer strings verbatim from Planwise-_Footer_Content.docx. Pillar colours from Brand_Guidelines.pdf (secondary palette). Contact details verbatim from footer.",
-  "brandLine": "Independent ageing well support for individuals and families.",
+  "brandLine": "Direction. Clarity. Confidence.",
   "nav": [
     { "label": "Home", "route": "/" },
     { "label": "About Us", "route": "/about" },

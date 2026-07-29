@@ -32,7 +32,7 @@ export default function Footer() {
             height={200}
           />
         </Link>
-          <p className="text-white/80 max-w-sm">{site.brandLine}</p>
+          <p className="mt-4 text-white/80 max-w-sm">{site.brandLine}</p>
           <div className="mt-6">
             <CTAButton label={site.footerCta} href="/contact" variant="inverse" size="sm" />
           </div>
