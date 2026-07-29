@@ -142,6 +142,19 @@ export default function AboutPage() {
         </div>
       </section>
 
+
+      {/* Our Values */}
+      <section className="bg-white py-6 md:py-9">
+        <div className="container">
+          <FadeInSection>
+            <PageMDX source={ourValuesHeading} className={noHeadingGap} />
+            <div className="mt-8">
+              <OurValuesCards items={ourValues} />
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
       {/* Our Approach */}
       <section className="relative overflow-hidden bg-white py-6 md:py-9">
         <div className="absolute -z-10 top-0 -left-32 w-96 h-96 rounded-full bg-pillar-where-how/10 blur-3xl" aria-hidden="true" />
@@ -160,17 +173,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Values */}
-      <section className="bg-white py-6 md:py-9">
-        <div className="container">
-          <FadeInSection>
-            <PageMDX source={ourValuesHeading} className={noHeadingGap} />
-            <div className="mt-8">
-              <OurValuesCards items={ourValues} />
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
 
       {/* Meet The Team */}
       <section className="bg-white py-6 md:py-9">
