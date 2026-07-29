@@ -9,6 +9,12 @@ const socialIcons: Record<string, LucideIcon> = {
   Instagram, Facebook, LinkedIn: Linkedin
 };
 
+const bottomBarLinkHrefs: Record<string, string> = {
+  'Terms and Conditions': '/terms-and-conditions',
+  'Privacy Policy': '/privacy-policy',
+  Disclaimer: '/disclaimer'
+};
+
 export default function Footer() {
   const site = getSite();
   const year = new Date().getFullYear();
@@ -74,7 +80,14 @@ export default function Footer() {
         <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-base text-white/70">
           <p>{copyright}</p>
           <ul className="flex flex-wrap gap-4">
-            {site.bottomBar.links.map((l) => (<li key={l}><a href="#" className="hover:text-white">{l}</a></li>))}
+            {site.bottomBar.links.map((l) => {
+              const href = bottomBarLinkHrefs[l] ?? '#';
+              return (
+                <li key={l}>
+                  <Link href={href} className="hover:text-white">{l}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
