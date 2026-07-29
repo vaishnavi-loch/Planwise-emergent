@@ -43,7 +43,6 @@ export default function Footer() {
             <CTAButton label={site.footerCta} href="/contact" variant="inverse" size="sm" />
           </div>
         </div>
-
         <nav className="lg:col-span-3" aria-label="Footer navigation">
           <h3 className="text-base font-semibold uppercase tracking-wider text-white/70 mb-4">Explore</h3>
           <ul className="space-y-2">
