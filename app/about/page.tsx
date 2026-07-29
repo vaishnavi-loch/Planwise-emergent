@@ -6,6 +6,7 @@ import { getPage, getFaq } from '@/lib/content';
 import PageMDX from '@/components/planwise/PageMDX';
 import TeamCards from '@/components/planwise/TeamCards';
 import ApproachPillarCards from '@/components/planwise/ApproachPillarCards';
+import OurValuesCards from '@/components/planwise/OurValuesCards';
 import IndependenceCards from '@/components/planwise/IndependenceCards';
 import FAQAccordion from '@/components/planwise/FAQAccordion';
 import FadeInSection from '@/components/planwise/FadeInSection';
@@ -50,6 +51,8 @@ export default function AboutPage() {
   const idxOurStory = body.indexOf('## Our Story');
   const idxOurApproach = body.indexOf('## Our Approach');
   const idxFirstPillarHeading = body.indexOf('### ', idxOurApproach);
+  const idxOurValues = body.indexOf('## Our Values');
+  const idxFirstValueHeading = body.indexOf('### ', idxOurValues);
   const idxMeetTeam = body.indexOf('## Meet The Team');
   const idxFirstMemberHeading = body.indexOf('### ', idxMeetTeam);
   const idxWhyIndependence = body.indexOf('## Why Independence Matters');
@@ -61,13 +64,19 @@ export default function AboutPage() {
   const ourStoryIntro = body.slice(idxOurStory, idxOurApproach);
   const approachIntro = body.slice(idxOurApproach, idxFirstPillarHeading);
 
-  const approachPillarsRaw = body.slice(idxFirstPillarHeading, idxMeetTeam);
+  const approachPillarsRaw = body.slice(idxFirstPillarHeading, idxOurValues);
   const idxApproachCta = approachPillarsRaw.indexOf('**CTA');
   const approachPillars = splitHeadingBlocks(approachPillarsRaw.slice(0, idxApproachCta)).map((p) => ({
     title: p.heading,
     body: p.body
   }));
   const approachCta = approachPillarsRaw.slice(idxApproachCta);
+
+  const ourValuesHeading = body.slice(idxOurValues, idxFirstValueHeading);
+  const ourValues = splitHeadingBlocks(body.slice(idxFirstValueHeading, idxMeetTeam)).map((v) => ({
+    title: v.heading,
+    body: v.body
+  }));
 
   const teamIntro = body.slice(idxMeetTeam, idxFirstMemberHeading);
   const teamMembersRaw = body.slice(idxFirstMemberHeading, idxWhyIndependence);
@@ -146,6 +155,18 @@ export default function AboutPage() {
             </div>
             <div className="mt-6 text-center">
               <PageMDX source={approachCta} />
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="bg-white py-6 md:py-9">
+        <div className="container">
+          <FadeInSection>
+            <PageMDX source={ourValuesHeading} className={noHeadingGap} />
+            <div className="mt-8">
+              <OurValuesCards items={ourValues} />
             </div>
           </FadeInSection>
         </div>
