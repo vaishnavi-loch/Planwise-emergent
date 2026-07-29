@@ -17,6 +17,9 @@ const CTA_HREF_OVERRIDES: Record<string, string> = {
   'explore the four pillars': '/pillars'
 };
 
+// Labels with no destination page yet — render as a non-navigating button.
+const CTA_NO_LINK = new Set(['read the full story']);
+
 function cleanChildren(children: ReactNode): ReactNode {
   if (typeof children === 'string') return children.replace(LAYOUT_HINT, '');
   if (Array.isArray(children)) return children.map((c) => (typeof c === 'string' ? c.replace(LAYOUT_HINT, '') : c));
@@ -57,7 +60,8 @@ export default function PageMDX({ source, className }: Props) {
             const m = text.match(CTA_RE);
             if (m) {
               const label = m[1].trim();
-              const href = CTA_HREF_OVERRIDES[label.toLowerCase()] ?? '/contact';
+              const key = label.toLowerCase();
+              const href = CTA_NO_LINK.has(key) ? '' : CTA_HREF_OVERRIDES[key] ?? '/contact';
               return (
                 <span className="block my-6">
                   <CTAButton label={label} href={href} />
