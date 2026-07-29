@@ -1,9 +1,5 @@
 // Planwise brand tokens — values from Brand_Guidelines.pdf.
 // Paste into tailwind.config.ts under theme.extend. No hard-coded hex in components.
-//
-// FONT IS PROVISIONAL. Brand font is "Agenda" (Adobe), fallback "Futura PT" — both are
-// licensed Adobe fonts, not free webfonts. Using a geometric-sans fallback until the client
-// confirms an Adobe Fonts web kit ID or approves a substitute. Swap `fontFamily.sans` then.
 
 export const planwiseTokens = {
   colors: {
@@ -35,7 +31,6 @@ export const planwiseTokens = {
     }
   },
   fontFamily: {
-    // PROVISIONAL — see note above.
-    sans: ['Jost', 'Futura PT', 'Century Gothic', 'system-ui', 'sans-serif']
+    sans: ['var(--font-sans)', 'Futura PT', 'Century Gothic', 'system-ui', 'sans-serif']
   }
 } as const;

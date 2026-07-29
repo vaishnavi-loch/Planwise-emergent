@@ -21,7 +21,7 @@ const planwiseTokens = {
     }
   },
   fontFamily: {
-    sans: ['Jost', 'Futura PT', 'Century Gothic', 'system-ui', 'sans-serif']
+    sans: ['var(--font-sans)', 'Futura PT', 'Century Gothic', 'system-ui', 'sans-serif']
   }
 };
 module.exports = { planwiseTokens };

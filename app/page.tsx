@@ -141,9 +141,9 @@ export default function HomePage() {
             <div className="mt-10">
               <ProcessSteps />
             </div>
-            <div className="mt-6 text-center [&_p]:font-semibold [&_p]:text-navy">
+            {/* <div className="mt-6 text-center [&_p]:font-semibold [&_p]:text-navy">
               <PageMDX source={stepsOutro} />
-            </div>
+            </div> */}
           </FadeInSection>
         </div>
       </section>

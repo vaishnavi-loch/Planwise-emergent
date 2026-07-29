@@ -3,5 +3,6 @@ import HeaderClient from './HeaderClient';
 
 export default function Header() {
   const site = getSite();
-  return <HeaderClient nav={site.nav} footerCta={site.footerCta} />;
+  const nav = site.nav.filter((n) => n.route !== '/articles');
+  return <HeaderClient nav={nav} footerCta={site.footerCta} />;
 }
