@@ -117,7 +117,7 @@ export default function ArticlesPage() {
           <FadeInSection>
             <PageMDX source={featuredIntro} className={noHeadingGap} />
             <div className="mt-8">
-              <FeaturedArticleCards items={featuredItems} />
+              <ArticlesList />
             </div>
           </FadeInSection>
         </div>
@@ -128,8 +128,9 @@ export default function ArticlesPage() {
         <div className="container">
           <FadeInSection>
             <PageMDX source={latestIntro} className={noHeadingGap} />
+            
             <div className="mt-8">
-              <ArticlesList />
+              <FeaturedArticleCards items={featuredItems} />
             </div>
           </FadeInSection>
         </div>

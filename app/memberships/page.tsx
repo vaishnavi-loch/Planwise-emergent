@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { ShieldCheck } from 'lucide-react';
-import { getPage, getFaq } from '@/lib/content';
+import { getPage, getFaq, getMemberships } from '@/lib/content';
 import PageMDX from '@/components/planwise/PageMDX';
 import MembershipTable from '@/components/planwise/MembershipTable';
 import WhichOptionCards from '@/components/planwise/WhichOptionCards';
 import FAQAccordion from '@/components/planwise/FAQAccordion';
 import FadeInSection from '@/components/planwise/FadeInSection';
+import CTAButton from '@/components/planwise/CTAButton';
 
 export const revalidate = 3600;
 
@@ -43,6 +44,7 @@ export default function MembershipsPage() {
   const transparentPricing = body.slice(idxTransparentPricing, idxReadyToGetStarted);
   const closing = body.slice(idxReadyToGetStarted, idxFaq);
   const faqHeading = body.slice(idxFaq, body.indexOf('\n', idxFaq) + 1);
+  const { discoveryCall } = getMemberships();
 
   return (
     <>
@@ -117,6 +119,9 @@ export default function MembershipsPage() {
             </div>
             <div className="mt-6 max-w-2xl">
               <PageMDX source={whichOptionOutro} />
+            </div>
+            <div className="mt-6 text-center">
+              <CTAButton label={discoveryCall.label} href="/contact" size="sm" />
             </div>
           </FadeInSection>
         </div>

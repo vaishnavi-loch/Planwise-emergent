@@ -41,8 +41,9 @@ export default function MembershipTable() {
                 <dd className="text-navy/80 mt-1">{t.extras}</dd>
               </div>
             </dl>
+            {/* TODO: add href for select plan */}
             <div className="mt-6">
-              <CTAButton label={discoveryCall.label} href="/contact" size="sm" />
+              <CTAButton label={"Select Plan"} href='' size="sm" />
             </div>
           </div>
         ))}
