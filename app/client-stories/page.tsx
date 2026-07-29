@@ -35,7 +35,7 @@ export default function ClientStoriesPage() {
 
   const idxHowWeHelped = body.indexOf("## How We've Helped");
   const idxStoriesBySituation = body.indexOf('## Stories By Situation');
-  const idxStoryCardsHeading = body.indexOf('## Story Cards');
+  const idxStoryCardsHeading = body.indexOf('## Client Stories');
   const idxFirstStoryHeading = body.indexOf('### ', idxStoryCardsHeading);
   const idxYourStory = body.indexOf('## Your Story Could Be Next');
   const idxFaq = body.indexOf('## Frequently Asked Questions');

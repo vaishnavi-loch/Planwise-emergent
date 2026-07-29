@@ -66,7 +66,7 @@ export default function PageMDX({ source, className }: Props) {
             return <strong className="font-semibold text-navy">{children}</strong>;
           },
           em: ({ children }: ComponentPropsWithoutRef<'em'>) => (
-            <em className="italic text-navy/80">{children}</em>
+            <em className="inline-block not-italic -skew-x-6 text-navy/80">{children}</em>
           ),
           ul: ({ children }: ComponentPropsWithoutRef<'ul'>) => (
             <ul className="my-4 space-y-2">{children}</ul>

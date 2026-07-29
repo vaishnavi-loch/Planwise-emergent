@@ -38,7 +38,7 @@ export interface LoadedArticle {
 }
 
 function readMdx(fullPath: string): { data: Record<string, unknown>; content: string } {
-  const raw = fs.readFileSync(fullPath, 'utf8');
+  const raw = fs.readFileSync(fullPath, 'utf8').replace(/\r\n/g, '\n');
   const { data, content } = matter(raw);
   return { data, content };
 }

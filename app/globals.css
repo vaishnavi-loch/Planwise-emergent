@@ -41,7 +41,7 @@
   .prose-planwise ul { @apply space-y-2; }
   .prose-planwise ul li { @apply text-navy pl-6 relative; }
   .prose-planwise ul li::before { content: '•'; @apply absolute left-0 top-0 text-pillar-purpose text-lg leading-none; }
-  .prose-planwise em { @apply italic text-navy/80; }
+  .prose-planwise em { @apply inline-block not-italic -skew-x-6 text-navy/80; }
 }
 
 @media (prefers-reduced-motion: reduce) {
