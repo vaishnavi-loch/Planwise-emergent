@@ -43,7 +43,7 @@ export default function MembershipTable() {
             </dl>
             {/* TODO: add href for select plan */}
             <div className="mt-6">
-              <CTAButton label={"Select Plan"} href='' size="sm" />
+              <CTAButton label={"Select Plan"} href='#' size="sm" />
             </div>
           </div>
         ))}
