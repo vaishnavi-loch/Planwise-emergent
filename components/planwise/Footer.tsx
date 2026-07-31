@@ -9,6 +9,7 @@ const socialIcons: Record<string, LucideIcon> = {
   Instagram, Facebook, LinkedIn: Linkedin
 };
 
+
 const socialLinkHrefs: Record<string, string> = {
   Instagram: 'https://www.instagram.com/planwise.australia',
   Facebook: 'https://www.facebook.com/profile.php?id=61586804823367',
