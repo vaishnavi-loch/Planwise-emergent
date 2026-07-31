@@ -47,3 +47,13 @@
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
 }
+
+/* Paragraph copy sits one step up the type scale from body/nav/button text.
+   Left unlayered so it wins over a <p>'s own text-sm/text-base utility without
+   touching non-paragraph elements (buttons, nav links) that share those classes.
+   Line-height is left alone so each paragraph's own leading-* utility (or the
+   browser default) still applies. Paragraphs already set to text-lg or larger
+   (e.g. price figures) are untouched. */
+p:not(.text-lg):not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl):not(.text-6xl):not(.text-7xl) {
+  font-size: 1.2375rem;
+}

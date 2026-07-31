@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div className="lg:col-span-2">
           <h3 className="text-base font-semibold uppercase tracking-wider text-white/70 mb-4">Newsletter</h3>
-          <p className="text-white/80 text-base">{site.newsletter.prompt}</p>
+          <p className="text-white/80" style={{ fontSize: '16px' }}>{site.newsletter.prompt}</p>
           <NewsletterForm buttonLabel={site.newsletter.buttonLabel} />
           <div className="mt-5 flex gap-3">
             {site.social.map((s) => {
@@ -89,8 +89,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-base text-white/70">
-          <p>{copyright}</p>
+        <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-white/70" style={{ fontSize: '16px' }}>
+          <p style={{ fontSize: '16px' }}>{copyright}</p>
           <ul className="flex flex-wrap gap-4">
             {site.bottomBar.links.map((l) => {
               const href = bottomBarLinkHrefs[l] ?? '#';

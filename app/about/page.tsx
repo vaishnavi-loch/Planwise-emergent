@@ -58,7 +58,7 @@ export default function AboutPage() {
   const idxWhyIndependence = body.indexOf('## Why Independence Matters');
   const idxFirstIndependenceHeading = body.indexOf('### ', idxWhyIndependence);
   const idxReadyToGetStarted = body.indexOf('## Ready To Get Started?');
-  const idxFaqHeading = body.indexOf('**Frequently Asked Questions**');
+  const idxFaqHeading = body.indexOf('## Frequently Asked Questions');
 
   const hero = body.slice(0, idxOurStory);
   const ourStoryIntro = body.slice(idxOurStory, idxOurApproach);
