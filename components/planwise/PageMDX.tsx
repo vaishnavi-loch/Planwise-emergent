@@ -77,8 +77,9 @@ export default function PageMDX({ source, className }: Props) {
             <ul className="my-4 space-y-2">{children}</ul>
           ),
           li: ({ children }: ComponentPropsWithoutRef<'li'>) => (
-            <li className="pl-6 relative text-navy/90 before:content-['\u2022'] before:absolute before:left-0 before:top-0 before:text-pillar-purpose before:text-lg before:leading-none">
-              {children}
+            <li className="flex items-baseline gap-3 text-lg text-navy/90">
+              <span className="text-pillar-purpose" aria-hidden="true">&bull;</span>
+              <span>{children}</span>
             </li>
           ),
           a: ({ children, href }: ComponentPropsWithoutRef<'a'>) => (
