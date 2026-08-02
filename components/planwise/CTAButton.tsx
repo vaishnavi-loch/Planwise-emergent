@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 interface Props {
   label: string;
   href?: string;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'inverse';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'inverse' | 'pillar-purpose' | 'pillar-legal-financial' | 'pillar-mind-body' | 'pillar-where-how';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
@@ -17,7 +17,11 @@ const variants: Record<NonNullable<Props['variant']>, string> = {
   primary: 'bg-pillar-purpose text-white hover:bg-pillar-purpose/90 focus-visible:ring-pillar-purpose',
   secondary: 'bg-navy text-white hover:bg-navy-80 focus-visible:ring-navy',
   ghost: 'bg-transparent text-navy border border-navy/30 hover:bg-navy/5 focus-visible:ring-navy',
-  inverse: 'bg-white text-navy hover:bg-white/90 focus-visible:ring-white'
+  inverse: 'bg-white text-navy hover:bg-white/90 focus-visible:ring-white',
+  'pillar-purpose': 'bg-pillar-purpose text-white hover:bg-pillar-purpose/90 focus-visible:ring-pillar-purpose',
+  'pillar-legal-financial': 'bg-pillar-legal-financial text-white hover:bg-pillar-legal-financial/90 focus-visible:ring-pillar-legal-financial',
+  'pillar-mind-body': 'bg-pillar-mind-body text-white hover:bg-pillar-mind-body/90 focus-visible:ring-pillar-mind-body',
+  'pillar-where-how': 'bg-pillar-where-how text-white hover:bg-pillar-where-how/90 focus-visible:ring-pillar-where-how'
 };
 const sizes: Record<NonNullable<Props['size']>, string> = {
   sm: 'text-base px-4 py-2',

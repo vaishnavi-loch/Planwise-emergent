@@ -26,7 +26,7 @@ export default function PillarBadgeRow({ names }: Props) {
         return (
           <Link
             key={name}
-            href="/pillars"
+            href={`/pillars/${slug}`}
             className={`inline-flex items-center rounded-full px-4 py-2 text-base font-semibold transition-colors ${badgeClasses[slug]}`}
           >
             {name}

@@ -14,7 +14,7 @@ export const planwiseTokens = {
     // Secondary — ONE colour per pillar. Use only for its pillar, or as small accents.
     pillar: {
       purpose: '#41AC6B', // Green — Purpose
-      'legal-financial': '#4DA7D9', // Blue — Legal & Financial
+      'legal-financial': '#4DA7D9', // Blue — Financial & Legal
       'mind-body': '#AB82BB', // Purple — Mind & Body
       'where-how': '#F79C5B' // Orange — Where & How You Live
     },

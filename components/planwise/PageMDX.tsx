@@ -4,7 +4,7 @@
 // not visible copy (per BUILD_SPEC §1).
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { ComponentProps, ComponentPropsWithoutRef, ReactNode } from 'react';
 import CTAButton from '@/components/planwise/CTAButton';
 
 const LAYOUT_HINT = /\s*\((?:LEFT|RIGHT|CARDS)\)\s*$/;
@@ -14,7 +14,11 @@ const CTA_RE = /^\s*CTA\s*[–—\-:.]\s*(.+)$/i;
 const CTA_HREF_OVERRIDES: Record<string, string> = {
   'compare memberships in full': '/memberships',
   'explore the 4 pillars': '/pillars',
-  'explore the four pillars': '/pillars'
+  'explore the four pillars': '/pillars',
+  'explore purpose': '/pillars/purpose',
+  'explore financial & legal': '/pillars/legal-and-financial',
+  'explore mind & body': '/pillars/mind-and-body',
+  'explore where & how you live': '/pillars/where-and-how-you-live'
 };
 
 // Labels with no destination page yet — render as a non-navigating button.
@@ -32,9 +36,11 @@ function childrenAsText(children: ReactNode): string {
   return '';
 }
 
-interface Props { source: string; className?: string }
+type CTAVariant = ComponentProps<typeof CTAButton>['variant'];
 
-export default function PageMDX({ source, className }: Props) {
+interface Props { source: string; className?: string; ctaVariant?: CTAVariant }
+
+export default function PageMDX({ source, className, ctaVariant }: Props) {
   return (
     <div className={`prose-planwise max-w-none ${className ?? ''}`}>
       <ReactMarkdown
@@ -64,7 +70,7 @@ export default function PageMDX({ source, className }: Props) {
               const href = CTA_NO_LINK.has(key) ? '' : CTA_HREF_OVERRIDES[key] ?? '/contact';
               return (
                 <span className="block my-6">
-                  <CTAButton label={label} href={href} />
+                  <CTAButton label={label} href={href} variant={ctaVariant} />
                 </span>
               );
             }
@@ -78,7 +84,7 @@ export default function PageMDX({ source, className }: Props) {
           ),
           li: ({ children }: ComponentPropsWithoutRef<'li'>) => (
             <li className="flex items-baseline gap-3 text-lg text-navy/90">
-              <span className="text-pillar-purpose" aria-hidden="true">&bull;</span>
+              <span className="li-bullet text-pillar-purpose" aria-hidden="true">&bull;</span>
               <span>{children}</span>
             </li>
           ),

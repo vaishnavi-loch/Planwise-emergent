@@ -17,7 +17,7 @@ export default function PillarCards() {
       {site.pillars.map((p, i) => (
         <Link
           key={p.slug}
-          href="/pillars"
+          href={`/pillars/${p.slug}`}
           className={`group relative rounded-2xl border-2 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${pillarClasses[p.slug]}`}
         >
           <span className="absolute -top-3 -left-3 grid h-9 w-9 place-items-center rounded-full bg-white text-xs font-bold shadow-md ring-2 ring-current">
