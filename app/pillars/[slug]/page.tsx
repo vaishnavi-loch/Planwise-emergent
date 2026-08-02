@@ -12,7 +12,7 @@ import {
 import { getPage, getSite } from '@/lib/content';
 import PageMDX from '@/components/planwise/PageMDX';
 import PillarSubCards from '@/components/planwise/PillarSubCards';
-import StoryCards from '@/components/planwise/StoryCards';
+import PillarStoryCard from '@/components/planwise/PillarStoryCard';
 import FadeInSection from '@/components/planwise/FadeInSection';
 
 export const revalidate = 3600;
@@ -49,7 +49,8 @@ const PILLAR_UI = {
     closingGradient: 'bg-gradient-to-br from-navy/5 via-pillar-purpose/10 to-pillar-purpose/5',
     heroImage: '/images/photos/hero-copule-happy-barcelona.jpg',
     heroAlt: 'A happy senior couple travelling and spending time together',
-    accentToken: 'purpose' as const
+    accentToken: 'purpose' as const,
+    storyBorder: 'border-l-pillar-purpose'
   },
   'legal-and-financial': {
     headingTint: '[&_h1]:!text-pillar-legal-financial [&_h2]:!text-pillar-legal-financial [&_h3]:!text-pillar-legal-financial [&_.li-bullet]:!text-pillar-legal-financial',
@@ -64,7 +65,8 @@ const PILLAR_UI = {
     closingGradient: 'bg-gradient-to-br from-navy/5 via-pillar-legal-financial/10 to-pillar-legal-financial/5',
     heroImage: '/images/photos/advisor-consultation.jpg',
     heroAlt: 'A Planwise adviser meeting with a senior couple',
-    accentToken: 'legal-financial' as const
+    accentToken: 'legal-financial' as const,
+    storyBorder: 'border-l-pillar-legal-financial'
   },
   'mind-and-body': {
     headingTint: '[&_h1]:!text-pillar-mind-body [&_h2]:!text-pillar-mind-body [&_h3]:!text-pillar-mind-body [&_.li-bullet]:!text-pillar-mind-body',
@@ -79,7 +81,8 @@ const PILLAR_UI = {
     closingGradient: 'bg-gradient-to-br from-navy/5 via-pillar-mind-body/10 to-pillar-mind-body/5',
     heroImage: '/images/photos/hero-couple-park-walk.jpg',
     heroAlt: 'A senior couple enjoying an active walk together',
-    accentToken: 'mind-body' as const
+    accentToken: 'mind-body' as const,
+    storyBorder: 'border-l-pillar-mind-body'
   },
   'where-and-how-you-live': {
     headingTint: '[&_h1]:!text-pillar-where-how [&_h2]:!text-pillar-where-how [&_h3]:!text-pillar-where-how [&_.li-bullet]:!text-pillar-where-how',
@@ -94,7 +97,8 @@ const PILLAR_UI = {
     closingGradient: 'bg-gradient-to-br from-navy/5 via-pillar-where-how/10 to-pillar-where-how/5',
     heroImage: '/images/photos/about-independence-couple.jpg',
     heroAlt: 'A senior couple reviewing their own paperwork together at home',
-    accentToken: 'where-how' as const
+    accentToken: 'where-how' as const,
+    storyBorder: 'border-l-pillar-where-how'
   }
 } as const;
 
@@ -193,7 +197,12 @@ export default async function PillarDetailPage({ params }: { params: Promise<{ s
   const storyBlockRaw = practiceRaw.slice(idxStoryHeading, idxClosingCta);
   const closingCta = practiceRaw.slice(idxClosingCta);
   const storyBlocks = splitHeadingBlocks(storyBlockRaw);
-  const story = storyBlocks[0] ? { title: storyBlocks[0].heading, body: storyBlocks[0].body, accent: ui.accentToken } : null;
+  const storyParagraphs = storyBlocks[0]
+    ? storyBlocks[0].body.split(/\n{2,}/).map((p) => p.trim()).filter((p) => p && !p.startsWith('**CTA'))
+    : [];
+  const story = storyBlocks[0]
+    ? { title: storyBlocks[0].heading, situation: storyParagraphs[0] ?? '', whatWeDid: storyParagraphs[1] ?? '', outcome: storyParagraphs[2] ?? '' }
+    : null;
 
   return (
     <>
@@ -287,12 +296,14 @@ export default async function PillarDetailPage({ params }: { params: Promise<{ s
               <h2 className={`text-2xl md:text-3xl font-semibold mb-6 ${ui.textColor}`}>
                 {pillar.name} in Practice
               </h2>
-              <StoryCards stories={[story]} />
-              <div className="mt-6">
-                <Link href="/client-stories" className="inline-flex items-center gap-2 text-base font-semibold text-navy/70 hover:text-navy">
-                  See more client stories <ArrowLeft className="w-4 h-4 rotate-180" aria-hidden="true" />
-                </Link>
-              </div>
+              <PillarStoryCard
+                title={story.title}
+                situation={story.situation}
+                whatWeDid={story.whatWeDid}
+                outcome={story.outcome}
+                borderClass={ui.storyBorder}
+                ctaVariant={ui.ctaVariant}
+              />
             </FadeInSection>
           </div>
         </section>

@@ -4,11 +4,11 @@ import PageMDX from '@/components/planwise/PageMDX';
 interface Pillar { slug: string; name: string; color: string; illustration: string }
 interface Props { index: number; pillar: Pillar; heading: string; body: string; cta: string; reverse?: boolean }
 
-const pillarClasses: Record<string, { text: string; ring: string; blob: string; badge: string }> = {
-  purpose: { text: 'text-pillar-purpose', ring: 'ring-pillar-purpose/20', blob: 'bg-pillar-purpose/10', badge: 'bg-pillar-purpose' },
-  'mind-and-body': { text: 'text-pillar-mind-body', ring: 'ring-pillar-mind-body/20', blob: 'bg-pillar-mind-body/10', badge: 'bg-pillar-mind-body' },
-  'legal-and-financial': { text: 'text-pillar-legal-financial', ring: 'ring-pillar-legal-financial/20', blob: 'bg-pillar-legal-financial/10', badge: 'bg-pillar-legal-financial' },
-  'where-and-how-you-live': { text: 'text-pillar-where-how', ring: 'ring-pillar-where-how/20', blob: 'bg-pillar-where-how/10', badge: 'bg-pillar-where-how' }
+const pillarClasses: Record<string, { text: string; ring: string; blob: string; badge: string; ctaVariant: 'pillar-purpose' | 'pillar-legal-financial' | 'pillar-mind-body' | 'pillar-where-how' }> = {
+  purpose: { text: 'text-pillar-purpose', ring: 'ring-pillar-purpose/20', blob: 'bg-pillar-purpose/10', badge: 'bg-pillar-purpose', ctaVariant: 'pillar-purpose' },
+  'mind-and-body': { text: 'text-pillar-mind-body', ring: 'ring-pillar-mind-body/20', blob: 'bg-pillar-mind-body/10', badge: 'bg-pillar-mind-body', ctaVariant: 'pillar-mind-body' },
+  'legal-and-financial': { text: 'text-pillar-legal-financial', ring: 'ring-pillar-legal-financial/20', blob: 'bg-pillar-legal-financial/10', badge: 'bg-pillar-legal-financial', ctaVariant: 'pillar-legal-financial' },
+  'where-and-how-you-live': { text: 'text-pillar-where-how', ring: 'ring-pillar-where-how/20', blob: 'bg-pillar-where-how/10', badge: 'bg-pillar-where-how', ctaVariant: 'pillar-where-how' }
 };
 
 export default function PillarFeature({ index, pillar, heading, body, cta, reverse }: Props) {
@@ -28,7 +28,7 @@ export default function PillarFeature({ index, pillar, heading, body, cta, rever
             <h2 className={`text-2xl md:text-3xl lg:text-4xl font-semibold ${c.text} mb-4`}>{heading}</h2>
             <PageMDX source={body} />
             <div className="mt-2">
-              <PageMDX source={cta} />
+              <PageMDX source={cta} ctaVariant={c.ctaVariant} />
             </div>
           </div>
         </div>
