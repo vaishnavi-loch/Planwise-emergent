@@ -4,11 +4,11 @@ import PageMDX from '@/components/planwise/PageMDX';
 interface Pillar { slug: string; name: string; color: string; illustration: string }
 interface Props { index: number; pillar: Pillar; heading: string; body: string; cta: string; reverse?: boolean }
 
-const pillarClasses: Record<string, { text: string; ring: string; blob: string; badge: string }> = {
-  purpose: { text: 'text-pillar-purpose', ring: 'ring-pillar-purpose/20', blob: 'bg-pillar-purpose/10', badge: 'bg-pillar-purpose' },
-  'mind-and-body': { text: 'text-pillar-mind-body', ring: 'ring-pillar-mind-body/20', blob: 'bg-pillar-mind-body/10', badge: 'bg-pillar-mind-body' },
-  'legal-and-financial': { text: 'text-pillar-legal-financial', ring: 'ring-pillar-legal-financial/20', blob: 'bg-pillar-legal-financial/10', badge: 'bg-pillar-legal-financial' },
-  'where-and-how-you-live': { text: 'text-pillar-where-how', ring: 'ring-pillar-where-how/20', blob: 'bg-pillar-where-how/10', badge: 'bg-pillar-where-how' }
+const pillarClasses: Record<string, { text: string; ring: string; blob: string; badge: string; cta: string }> = {
+  purpose: { text: 'text-pillar-purpose', ring: 'ring-pillar-purpose/20', blob: 'bg-pillar-purpose/10', badge: 'bg-pillar-purpose', cta: 'bg-pillar-purpose hover:bg-pillar-purpose/90 focus-visible:ring-pillar-purpose' },
+  'mind-and-body': { text: 'text-pillar-mind-body', ring: 'ring-pillar-mind-body/20', blob: 'bg-pillar-mind-body/10', badge: 'bg-pillar-mind-body', cta: 'bg-pillar-mind-body hover:bg-pillar-mind-body/90 focus-visible:ring-pillar-mind-body' },
+  'legal-and-financial': { text: 'text-pillar-legal-financial', ring: 'ring-pillar-legal-financial/20', blob: 'bg-pillar-legal-financial/10', badge: 'bg-pillar-legal-financial', cta: 'bg-pillar-legal-financial hover:bg-pillar-legal-financial/90 focus-visible:ring-pillar-legal-financial' },
+  'where-and-how-you-live': { text: 'text-pillar-where-how', ring: 'ring-pillar-where-how/20', blob: 'bg-pillar-where-how/10', badge: 'bg-pillar-where-how', cta: 'bg-pillar-where-how hover:bg-pillar-where-how/90 focus-visible:ring-pillar-where-how' }
 };
 
 export default function PillarFeature({ index, pillar, heading, body, cta, reverse }: Props) {
@@ -28,7 +28,7 @@ export default function PillarFeature({ index, pillar, heading, body, cta, rever
             <h2 className={`text-2xl md:text-3xl lg:text-4xl font-semibold ${c.text} mb-4`}>{heading}</h2>
             <PageMDX source={body} />
             <div className="mt-2">
-              <PageMDX source={cta} />
+              <PageMDX source={cta} ctaClassName={c.cta} />
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getSite } from '@/lib/content';
-import CTAButton from '@/components/planwise/CTAButton';
 import NewsletterForm from '@/components/planwise/NewsletterForm';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, type LucideIcon } from 'lucide-react';
 import Image from "next/image";
@@ -29,7 +28,7 @@ export default function Footer() {
     <footer className="mt-24 bg-navy text-white" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="container py-14 grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-3">
          <Link href="/" className="flex items-center gap-2 font-semibold text-xl text-navy" aria-label="Planwise Australia home">
           <Image
             src="/images/Planwise-Logo_new.png"
@@ -39,13 +38,10 @@ export default function Footer() {
           />
         </Link>
           <p className="mt-4 text-white/80 max-w-sm">{site.brandLine}</p>
-          <div className="mt-6">
-            <CTAButton label={site.footerCta} href="/contact" variant="inverse" size="sm" />
-          </div>
         </div>
         <nav className="lg:col-span-3" aria-label="Footer navigation">
           <h3 className="text-base font-semibold uppercase tracking-wider text-white/70 mb-4">Explore</h3>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-[1.2375rem]">
             {site.nav.map((n) => (
               <li key={n.route}>
                 <Link href={n.route} className="text-white/90 hover:text-white underline decoration-transparent hover:decoration-white underline-offset-4">
@@ -58,16 +54,16 @@ export default function Footer() {
 
         <div className="lg:col-span-3">
           <h3 className="text-base font-semibold uppercase tracking-wider text-white/70 mb-4">Contact</h3>
-          <ul className="space-y-3 text-white/90">
+          <ul className="space-y-3 text-white/90 text-[1.2375rem]">
             <li className="flex items-start gap-3"><Phone className="w-4 h-4 mt-1 shrink-0" aria-hidden="true" /><a href={`tel:${site.contact.phone.replace(/\s/g, '')}`} className="hover:underline">{site.contact.phone}</a></li>
             <li className="flex items-start gap-3"><Mail className="w-4 h-4 mt-1 shrink-0" aria-hidden="true" /><a href={`mailto:${site.contact.email}`} className="hover:underline">{site.contact.email}</a></li>
             <li className="flex items-start gap-3"><MapPin className="w-4 h-4 mt-1 shrink-0" aria-hidden="true" /><address className="not-italic">{site.contact.address}</address></li>
           </ul>
         </div>
 
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           <h3 className="text-base font-semibold uppercase tracking-wider text-white/70 mb-4">Newsletter</h3>
-          <p className="text-white/80" style={{ fontSize: '16px' }}>{site.newsletter.prompt}</p>
+          <p className="text-white/80">{site.newsletter.prompt}</p>
           <NewsletterForm buttonLabel={site.newsletter.buttonLabel} />
           <div className="mt-5 flex gap-3">
             {site.social.map((s) => {
@@ -89,8 +85,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-white/70" style={{ fontSize: '16px' }}>
-          <p style={{ fontSize: '16px' }}>{copyright}</p>
+        <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-white/70 text-[17px]">
+          <p className="!text-[17px]">{copyright}</p>
           <ul className="flex flex-wrap gap-4">
             {site.bottomBar.links.map((l) => {
               const href = bottomBarLinkHrefs[l] ?? '#';

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getPage } from '@/lib/content';
 import PageMDX from '@/components/planwise/PageMDX';
-import ArticlesList from '@/components/planwise/ArticlesList';
 import PillarBadgeRow from '@/components/planwise/PillarBadgeRow';
 import FeaturedArticleCards from '@/components/planwise/FeaturedArticleCards';
 import FAQAccordion from '@/components/planwise/FAQAccordion';
@@ -30,7 +29,6 @@ export default function ArticlesPage() {
 
   const idxBrowseByPillar = body.indexOf('## Browse By Pillar');
   const idxFeatured = body.indexOf('## Featured Articles and Guides');
-  const idxLatest = body.indexOf('## Latest Articles and Guides');
   const idxStayUpToDate = body.indexOf('## Stay Up To Date');
   const idxFaq = body.indexOf('## Frequently Asked Questions');
 
@@ -40,8 +38,7 @@ export default function ArticlesPage() {
   const browseIntro = browseBlocks.slice(0, 2).join('\n\n');
   const pillarNames = browseBlocks.slice(2).map(stripBold);
 
-  const featuredBlocks = body.slice(idxFeatured, idxLatest).split(/\n\n+/).filter(Boolean);
-  const featuredIntro = featuredBlocks.slice(0, 2).join('\n\n');
+  const featuredBlocks = body.slice(idxFeatured, idxStayUpToDate).split(/\n\n+/).filter(Boolean);
   const featuredItems = [];
   for (let i = 2; i < featuredBlocks.length; i += 3) {
     featuredItems.push({
@@ -52,9 +49,6 @@ export default function ArticlesPage() {
     });
   }
 
-  const latestBlocks = body.slice(idxLatest, idxStayUpToDate).split(/\n\n+/).filter(Boolean);
-  const latestIntro = latestBlocks.slice(0, 2).join('\n\n');
-
   const stayUpToDateRaw = body.slice(idxStayUpToDate, idxFaq);
   const idxEmailField = stayUpToDateRaw.indexOf('**Email Address**');
   const stayIntro = stayUpToDateRaw.slice(0, idxEmailField);
@@ -62,8 +56,8 @@ export default function ArticlesPage() {
   const newsletterCtaMatch = stayUpToDateRaw.slice(idxNewsletterCta).match(/CTA\s*[–—-]\s*([^*]+)/);
   const newsletterButtonLabel = newsletterCtaMatch ? newsletterCtaMatch[1].trim() : 'Subscribe';
 
-  const idxFaqCta = body.indexOf('**CTA', idxFaq);
-  const faqQnaBlocks = body.slice(idxFaq, idxFaqCta).split(/\n\n+/).filter(Boolean);
+  const idxReadyToGetStarted = body.indexOf('## Ready To Get Started?', idxFaq);
+  const faqQnaBlocks = body.slice(idxFaq, idxReadyToGetStarted).split(/\n\n+/).filter(Boolean);
   const faqHeading = faqQnaBlocks[0];
   const faqItems = [];
   for (let i = 1; i < faqQnaBlocks.length; i += 2) {
@@ -73,7 +67,7 @@ export default function ArticlesPage() {
       sourcePage: 'articles'
     });
   }
-  const faqCta = body.slice(idxFaqCta);
+  const closing = body.slice(idxReadyToGetStarted);
 
   return (
     <>
@@ -106,29 +100,6 @@ export default function ArticlesPage() {
             <div className="mt-6">
               <PillarBadgeRow names={pillarNames} />
             </div>
-          </FadeInSection>
-        </div>
-      </section>
-
-      {/* Featured Articles and Guides */}
-      <section className="relative overflow-hidden bg-white py-6 md:py-9">
-        <div className="absolute -z-10 top-0 -right-32 w-96 h-96 rounded-full bg-pillar-purpose/10 blur-3xl" aria-hidden="true" />
-        <div className="container">
-          <FadeInSection>
-            <PageMDX source={featuredIntro} className={noHeadingGap} />
-            <div className="mt-8">
-              <ArticlesList />
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
-
-      {/* Latest Articles and Guides */}
-      <section className="bg-white py-6 md:py-9">
-        <div className="container">
-          <FadeInSection>
-            <PageMDX source={latestIntro} className={noHeadingGap} />
-            
             <div className="mt-8">
               <FeaturedArticleCards items={featuredItems} />
             </div>
@@ -170,7 +141,7 @@ export default function ArticlesPage() {
             <div className="absolute -z-10 -top-16 -right-16 w-72 h-72 rounded-full bg-pillar-legal-financial/10 blur-3xl" aria-hidden="true" />
             <div className="absolute -z-10 -bottom-16 -left-16 w-72 h-72 rounded-full bg-pillar-purpose/10 blur-3xl" aria-hidden="true" />
             <div className="mx-auto max-w-2xl">
-              <PageMDX source={faqCta} />
+              <PageMDX source={closing} className={noHeadingGap} />
             </div>
           </div>
         </FadeInSection>

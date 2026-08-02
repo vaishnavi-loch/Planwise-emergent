@@ -32,9 +32,9 @@ function childrenAsText(children: ReactNode): string {
   return '';
 }
 
-interface Props { source: string; className?: string }
+interface Props { source: string; className?: string; ctaClassName?: string }
 
-export default function PageMDX({ source, className }: Props) {
+export default function PageMDX({ source, className, ctaClassName }: Props) {
   return (
     <div className={`prose-planwise max-w-none ${className ?? ''}`}>
       <ReactMarkdown
@@ -64,7 +64,7 @@ export default function PageMDX({ source, className }: Props) {
               const href = CTA_NO_LINK.has(key) ? '' : CTA_HREF_OVERRIDES[key] ?? '/contact';
               return (
                 <span className="block my-6">
-                  <CTAButton label={label} href={href} />
+                  <CTAButton label={label} href={href} className={ctaClassName} />
                 </span>
               );
             }
